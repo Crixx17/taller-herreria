@@ -1,138 +1,192 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taller de Herrería Pochy</title>
-  <link rel="stylesheet" href="estilos.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <h1>Herrería Pochy</h1>
-    <h6>"Tu mejor opcion"</h6>
-    <nav>
-      <ul>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section id="galeria">
-    <div class="Galeria">
-      <h2>Trabajos que realizamos:</h2>
-      <ul class="lista">
-        <li>Portones</li>
-        <li>Rejas</li>
-        <li>Puertas en polimetal</li>
-        <li>Enrollables</li>
-        <li>Ventanas en cristal</li>
-        <li>Manparas</li>
-        <li>Gabinetes en polimetal</li>
-        <li>Techado en aluzinc</li>
-        <li>Estructuras metalicas</li>
-        <li>Arte en herrería</li>
-      </ul>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7c7777;
+  color: #333;
+  line-height: 1.6;
+}
 
-      <div class="carrusel-contenedor">
-        <button class="carrusel-btn izquierda">❮</button>
-        <div class="carrusel">
-          <!-- Imágenes -->
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGZ9qMOf4GjxLxdjVcsZbBq3vHGmDKzeLQKA&s" alt="Portones">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFmxT8YWjpea5FCDMNwKpwbFdkJogHjwCW6g&s" alt="Rejas">
-          <img src="https://img2.corotos.com.do/variants/7pgf5fn2e65oq8oha9scnn69uu3h/77e39277ae1530a0f745ed74c6c3e169b223eb938dc573f0c9dc5f6cdf3f0c89" alt="Puertas polimetal">
-          <img src="https://corporacionalegria.com/wp-content/uploads/2021/08/garleria-productos-puerta-enrrollable-conta-incendio-corporacion-alegria-website-peru-2.jpg" alt="Enrollables">
-          <img src="https://i.pinimg.com/originals/71/ea/e1/71eae1e7e35ac750b3dd7cb056fa6056.jpg" alt="Ventanas de Hierro">
-          <img src="https://www.nexo-aberturas.com.ar/wp-content/uploads/2023/02/V1011.jpg" alt="Ventanas de cristal">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwW3k2zhf4Im3JckGWEpBWFR2EgeGct9Ko6u-tmzj6aD52m5Cr4YX1e3_TBvQa6wIU4m8&usqp=CAU" alt="Gabinetes en polimetal">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRL9H0xvhAUFrgXtdv9bwI0jHFLDrKGFDUcMVSkVCM3TVJf4xn0SaaPp3GRRkFC0lHAew7EnZ75gCIBY-qhoUVJcqDrSamqNofS8CRxG43GCUx1L9bfaSBZf-u9z_PB54o36jeoQ8IETWO/s1600/Aluzinc+prepintado+con+aislante.jpg" alt="Techado en aluzinc">
-          <img src="https://www.estructurasmetalicascolombia.com/images/montaje_estructuras/como_elegir/diseno_para_el_marco_estructural_de_acero_en_construcciones_metalicas_en_bogota_colombia.jpg" alt="Estructuras metalicas">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk8OlJ5MbWJh4fjracA8P5ssea_A7DQDTTMWfFoixQ9urONvDbwFyWhgIfB4g2Ha8Fz3M&usqp=CAU" alt="Arte en herreria">
-        </div>
-        <button class="carrusel-btn derecha">❯</button>
-      </div>
-    </div>
-  </section>
+h1 {
+  text-align: left;
+  font-family: Bodoni Moda SC;
+  color: gold;
+  text-shadow: 1px 0px 5px whitesmoke;
+}
 
-  <div class="Alinear">
-    <h6 class="Seleccion">Selecciona el trabajo que deseas</h6>
-    <section id="servicios"></section>
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 0px 0px 10% 10%;
+  box-shadow: 0px 0px 30px gold;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
 
-    <form class="formulario">
-      <label for="trabajo">Tipo de trabajo:</label>
-      <select id="trabajo" name="trabajo">
-        <option value="porton">Portones</option>
-        <option value="rejas">Rejas</option>
-        <option value="Puertas en polimetal">Puertas en polimetal</option>
-        <option value="Enrollables">Enrollables</option>
-        <option value="Ventanas en cristal">Ventanas en cristal</option>
-        <option value="Manparas">Manparas</option>
-        <option value="Gabinetes en polimetal">Gabinetes en polimetal</option>
-        <option value="Techado en aluzinc">Techado en aluzinc</option>
-        <option value="Estructuras metalicas">Estructuras metalicas</option>
-        <option value="Arte en herreria">Arte en herreria</option>
-      </select>
-      <br><br>
-      <label for="descripcion">Descripción del trabajo:</label><br>
-      <textarea id="descripcion" name="descripcion" rows="4" cols="40" placeholder="Escribe detalles del trabajo que necesitas..."></textarea>
-      <br><br>
-      <button type="submit">Enviar solicitud</button>
-    </form>
-  </div>
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
 
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <form class="contactos">
-      <a href="https://wa.me/8298578256">Escríbenos por Whatsapp</a>
-    </form>
-  </section>
+nav a {
+  text-shadow: 1px 1px 1px gold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  <footer>
-    <p>© 2025 Herrería Pochy - Todos los derechos reservados</p>
-    <p>Teléfono: 829-857-8256 | Dirección: Calle de los Fierros #123, Ciudad Metal</p>
-  </footer>
+section {
+  padding: 160px 20px 30px; /* Ajuste aquí para evitar que el header tape el contenido */
+  max-width: 1000px;
+  margin: auto;
+}
 
-  <script>
-    const carrusel = document.querySelector('.carrusel');
-    const btnIzquierda = document.querySelector('.carrusel-btn.izquierda');
-    const btnDerecha = document.querySelector('.carrusel-btn.derecha');
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 5px gold;
+}
 
-    let desplazamiento = 0;
-    const anchoImagen = 265;
+/* Carrusel */
+.carrusel-contenedor {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  box-shadow: 0px 0px 25px whitesmoke;
+}
 
-    btnDerecha.addEventListener('click', () => {
-      if (Math.abs(desplazamiento) < carrusel.scrollWidth - carrusel.clientWidth) {
-        desplazamiento -= anchoImagen;
-        carrusel.style.transform = `translateX(${desplazamiento}px)`;
-      }
-    });
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 15px;
+}
 
-    btnIzquierda.addEventListener('click', () => {
-      if (desplazamiento < 0) {
-        desplazamiento += anchoImagen;
-        carrusel.style.transform = `translateX(${desplazamiento}px)`;
-      }
-    });
-  </script>
+.carrusel img {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px whitesmoke;
+}
 
-  <script>
-    document.querySelector('.formulario').addEventListener('submit', function(e) {
-      e.preventDefault();
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(51, 51, 51, 0.7);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
 
-      let tipo = document.getElementById('trabajo').value;
-      let descripcion = document.getElementById('descripcion').value;
+.carrusel-btn.izquierda {
+  left: 10px;
+}
 
-      let numero = "18298578256";
-      let mensaje = `*Hola, estoy interesado en un trabajo de:* ${tipo}. *Detalles:* ${descripcion}`;
-      let url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+.carrusel-btn.derecha {
+  right: 10px;
+  color: whitesmoke;
+}
 
-      window.open(url, '_blank');
-    });
-  </script>
-</body>
-</html>
+/* Formularios */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.Seleccion {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 2cm;
+}
+
+.formulario {
+  margin-top: 2cm;
+  margin-left: 50px;
+  width: 75%;
+}
+
+.Alinear {
+  text-align: center;
+}
+
+h6 {
+  text-align: left;
+  margin-left: 17%;
+  font-size: 14px;
+  text-shadow: 0px 0px 5px gold;
+}
+
+.lista {
+  text-shadow: 0px 0px 1px gold;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+.contactos a {
+  text-decoration: none;
+}
+
+/* Ocultar scroll en navegadores que lo soporten */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
