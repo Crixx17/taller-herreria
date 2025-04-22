@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #7c7777;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: left;
+    font-family: Bodoni Moda SC;
+    color: gold;
+    text-shadow: 1px 0px 5px whitesmoke;
+  
+  }
+  
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 0px 0px 10% 10%;
+    box-shadow: 0px 0px 30px gold;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  nav a {
+    text-shadow: 1px 1px 1px gold;
+    text-shadow: gold;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    padding-top: 20%;
+    padding-bottom: 1%;
+    text-shadow: 1px 1px 5px gold;
+  }
+  
+  /* Carrusel */
+  .carrusel-contenedor {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 0;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    box-shadow: 0px 0px 25px whitesmoke;
+    
+  }
+  
+  .carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 15px;
+  }
+  
+  .carrusel img {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px whitesmoke;
+  }
+  
+  .carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(51, 51, 51, 0.7);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  .carrusel-btn.izquierda {
+    left: 10px;
+  }
+  
+  .carrusel-btn.derecha {
+    right: 10px;
+    color: whitesmoke;
+  }
+  
+  /* Formularios */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form input, form select, form textarea, form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  /* Footer */
+footer
+{
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 30px;
+}
+.Seleccion
+{
+    
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 2cm;
+}
+.formulario
+{
+    margin-top: 2cm;
+    margin-left: 50px;
+    width: 75%;
+    
+}
+.Alinear
+{
+    text-align: center;
+
+}
+h6
+{
+    text-align: left;
+    margin-left: 17%;
+    font-size: 14px;
+    text-shadow: 0px 0px 5px gold;
+}
+.lista
+{
+  text-shadow: 0px 0px 1px gold;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+.contactos a
+{
+  text-decoration:none;
+}
+
+
+body::-webkit-scrollbar 
+{
+  display: none; /* Chrome, Edge, Safari */
+}
