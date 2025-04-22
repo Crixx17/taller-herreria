@@ -1,130 +1,220 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #7c7777;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #7c7777;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1 {
-    text-align: left;
-    font-family: Bodoni Moda SC;
-    color: gold;
-    text-shadow: 1px 0px 5px whitesmoke;
+  text-align: left;
+  font-family: 'Bodoni Moda SC', serif;
+  color: gold;
+  text-shadow: 1px 0px 5px whitesmoke;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
-    border-radius: 0px 0px 10% 10%;
-    box-shadow: 0px 0px 30px gold;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 0px 0px 10% 10%;
+  box-shadow: 0px 0px 30px gold;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 0;
 }
 
 nav a {
-    text-shadow: 1px 1px 1px gold;
-    text-shadow: gold;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  text-shadow: 1px 1px 1px gold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 section {
-    padding: 160px 20px 30px; /* Cambié el padding-top a 160px para dejar espacio para el header fijo */
-    max-width: 1000px;
-    margin: auto;
+  padding: 80px 20px 30px; /* más espacio arriba por el header fijo */
+  max-width: 1000px;
+  margin: auto;
 }
 
 h2 {
-    text-align: left;
-    margin-bottom: 20px;
-    color: whitesmoke;
-    padding-top: 20%;
-    padding-bottom: 1%;
-    text-shadow: 1px 1px 5px gold;
+  text-align: left;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px gold;
 }
 
 /* Carrusel */
 .carrusel-contenedor {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 0;
-    border-top: 2px solid whitesmoke;
-    border-bottom: 2px solid whitesmoke;
-    box-shadow: 0px 0px 25px whitesmoke;
+  position: relative;
+  overflow: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  box-shadow: 0px 0px 25px whitesmoke;
 }
 
 .carrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
 .carrusel img {
-    flex: 0 0 auto;
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0px 0px 50px whitesmoke;
+  flex: 0 0 auto;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px whitesmoke;
+  scroll-snap-align: start;
 }
 
 .carrusel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(51, 51, 51, 0.7);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 2;
-    border-radius: 50%;
-}
-
-.carrusel-btn.izquierda {
-    left: 10px;
-}
-
-.carrusel-btn.derecha {
-    right: 10px;
-    color: whitesmoke;
+  display: none; /* Ocultamos botones en móvil para usar scroll táctil */
 }
 
 /* Formularios */
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
 }
 
 form input, form select, form textarea, form button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.Seleccion {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
+.formulario {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.Alinear {
+  text-align: center;
+}
+
+h6 {
+  text-align: left;
+  margin-left: 5%;
+  font-size: 14px;
+  text-shadow: 0px 0px 5px gold;
+}
+
+.lista {
+  text-shadow: 0px 0px 1px gold;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.contactos a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+/* Scroll invisible en carrusel solo */
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .carrusel img {
+    width: 200px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .carrusel img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .Seleccion {
+    font-size: 14px;
+  }
+}
 
