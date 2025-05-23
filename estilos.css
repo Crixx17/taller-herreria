@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #7c7777;
+  background-color: #1c1c1c;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
@@ -37,7 +37,7 @@ nav ul {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-top: 10px;
   padding: 0;
 }
 
@@ -56,9 +56,10 @@ section {
 
 h2 {
   text-align: left;
-  margin-bottom: 20px;
+  padding-bottom: 5px ;
   color: whitesmoke;
   text-shadow: 1px 1px 5px gold;
+  padding-top: 40px;
 }
 
 /* Carrusel */
@@ -68,9 +69,9 @@ h2 {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  border-top: 2px solid whitesmoke;
-  border-bottom: 2px solid whitesmoke;
-  box-shadow: 0px 0px 25px whitesmoke;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  box-shadow: 0px 0px 25px transparent;
 }
 
 .carrusel {
@@ -87,7 +88,7 @@ h2 {
   height: 150px;
   object-fit: cover;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px whitesmoke;
+  box-shadow: 0px 0px 20px transparent;
   scroll-snap-align: start;
 }
 
@@ -102,6 +103,7 @@ form {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   margin-top: 20px;
+
 }
 
 form input, form select, form textarea, form button {
@@ -136,21 +138,21 @@ footer {
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
-  margin-top: 2rem;
 }
 
-.formulario {
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+.formulario 
+{
+  margin-top: -25%;
+
+  
 }
 
 .Alinear {
   text-align: center;
 }
 
-h6 {
+h6 
+{
   text-align: left;
   margin-left: 5%;
   font-size: 14px;
@@ -160,9 +162,8 @@ h6 {
 .lista {
   text-shadow: 0px 0px 1px gold;
   color: whitesmoke;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-left: 20px;
-  margin-top: 195px;
 
 }
 
@@ -170,6 +171,7 @@ h6 {
   text-decoration: none;
   color: green;
   font-weight: bold;
+  
 }
 
 /* Scroll invisible en carrusel solo */
@@ -189,14 +191,13 @@ h6 {
     text-align: center;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .formulario {
+
+  .formulario 
+  {
     width: 100%;
-    padding: 0 10px;
+    margin-left: -9px;
+  
   }
 
   .carrusel img {
