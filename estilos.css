@@ -60,7 +60,7 @@ body {
 
 @keyframes newBorder
 {
-  100%{
+  0%{
     border-image: linear-gradient(gold,whitesmoke) 1;
   }
   100%
@@ -156,7 +156,7 @@ h2 {
 }
 @keyframes newBorder
 {
-  100%{
+  0%{
     border-image: linear-gradient(gold,whitesmoke) 1;
   }
   100%
