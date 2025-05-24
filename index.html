@@ -139,88 +139,41 @@
 
 <p>Teléfono: 829-857-8256 | Dirección: Calle de los Fierros #123, Ciudad Metal</p>
 
-</footer><script>
-  
-    const carrusel = document.querySelector('.carrusel');
-  
-    const btnIzquierda = document.querySelector('.carrusel-btn.izquierda');
-  
-    const btnDerecha = document.querySelector('.carrusel-btn.derecha');
-  
+</footer>
+  <script>
+  const carrusel = document.querySelector('.carrusel');
+  const btnIzquierda = document.querySelector('.carrusel-btn.izquierda');
+  const btnDerecha = document.querySelector('.carrusel-btn.derecha');
+  let desplazamiento = 0;
+  const anchoImagen = 265; // Ajusta este valor si tus imágenes tienen otro tamaño
 
-  
-    let desplazamiento = 0;
-  
-    const anchoImagen = 265; // Tamaño imagen + espacio
-  
+  btnDerecha.addEventListener('click', () => {
+    if (Math.abs(desplazamiento) < carrusel.scrollWidth - carrusel.clientWidth) {
+      desplazamiento -= anchoImagen;
+      carrusel.style.transform = `translateX(${desplazamiento}px)`;
+    }
+  });
 
-  
-    btnDerecha.addEventListener('click', () => {
-  
-      if (Math.abs(desplazamiento) < carrusel.scrollWidth - carrusel.clientWidth) {
-  
-        desplazamiento -= anchoImagen;
-  
-        carrusel.style.transform = translateX(${desplazamiento}px);
-  
-      }
-  
-    });
-  
+  btnIzquierda.addEventListener('click', () => {
+    if (desplazamiento < 0) {
+      desplazamiento += anchoImagen;
+      carrusel.style.transform = `translateX(${desplazamiento}px)`;
+    }
+  });
+</script>
 
-  
-    btnIzquierda.addEventListener('click', () => {
-  
-      if (desplazamiento < 0) {
-  
-        desplazamiento += anchoImagen;
-  
-        carrusel.style.transform = translateX(${desplazamiento}px);
-  
-      }
-  
-    });
-  
-  </script>  <script>
-  
-    document.querySelector('.formulario').addEventListener('submit', function(e) {
-  
-      e.preventDefault(); // Evita el envío tradicional del formulario
-  
-  
-  
-      // Obtener los valores del formulario
-  
-      let tipo = document.getElementById('trabajo').value;
-  
-      let descripcion = document.getElementById('descripcion').value;
-  
-  
-  
-      // Tu número de WhatsApp (sin + ni espacios)
-  
-      let numero = "18298578256";
-  
-  
-  
-      // Crear el mensaje
-  
-      let mensaje = *Hola, estoy interesado en un trabajo de:* ${tipo}. *Detalles:* ${descripcion};
-  
-  
-  
-      // Crear el enlace de WhatsApp
-  
-      let url = https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)};
-  
-  
-  
-      // Abrir WhatsApp en una nueva pestaña
-  
-      window.open(url, '_blank');
-  
-    });
-  
-  </script>
+<script>
+  document.querySelector('.formulario').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let tipo = document.getElementById('trabajo').value;
+    let descripcion = document.getElementById('descripcion').value;
+    let numero = "18298578256";
+    let mensaje = `Hola, estoy interesado en un trabajo de: ${tipo}. Detalles: ${descripcion}`;
+    let url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+
   </body>
   </html> 
