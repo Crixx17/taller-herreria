@@ -10,6 +10,64 @@ body {
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+  border-style: solid;
+
+  border-image: linear-gradient(gold,whitesmoke) 1 ;
+  animation: 1s newBorder infinite alternate;
+  
+
+}
+.chispas-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.chispa {
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  background: linear-gradient(to bottom, gold, gold,gold);
+  animation: caer 1.5s linear infinite;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+/* Animación de caída */
+@keyframes caer {
+  0% {
+    transform: translateY(-10px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(0.5) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Generar diferentes posiciones y velocidades para cada chispa */
+.chispa:nth-child(1) { left: 10%; animation-delay: 0s; }
+.chispa:nth-child(2) { left: 20%; animation-delay: 0.2s; }
+.chispa:nth-child(3) { left: 30%; animation-delay: 0.4s; }
+.chispa:nth-child(4) { left: 40%; animation-delay: 0.1s; }
+.chispa:nth-child(5) { left: 50%; animation-delay: 0.3s; }
+.chispa:nth-child(6) { left: 60%; animation-delay: 0.6s; }
+.chispa:nth-child(7) { left: 70%; animation-delay: 0.1s; }
+.chispa:nth-child(8) { left: 80%; animation-delay: 0.5s; }
+.chispa:nth-child(9) { left: 90%; animation-delay: 0.2s; }
+.chispa:nth-child(10) { left: 25%; animation-delay: 0.7s; }
+
+@keyframes newBorder
+{
+  100%{
+    border-image: linear-gradient(gold,whitesmoke) 1;
+  }
+  100%
+  {
+    border-image: linear-gradient(whitesmoke,gold)1;
+  }
+
 }
 
 h1 {
@@ -21,14 +79,14 @@ h1 {
 
 header {
   background-color: #333;
-  color: #fff;
-  padding: 20px 10px;
+  color: whitesmoke;
+  padding: 20px 10px 10px 10px ;
   text-align: center;
-  border-radius: 0px 0px 10% 10%;
+  border-radius: 0% 0% 10% 10%;
   box-shadow: 0px 0px 30px gold;
-  position: fixed;
   width: 100%;
   z-index: 1000;
+  
 }
 
 nav ul {
@@ -59,7 +117,7 @@ h2 {
   padding-bottom: 5px ;
   color: whitesmoke;
   text-shadow: 1px 1px 5px gold;
-  padding-top: 40px;
+  margin-top: -55px;
 }
 
 /* Carrusel */
@@ -79,7 +137,7 @@ h2 {
   gap: 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
+
 }
 
 .carrusel img {
@@ -88,8 +146,23 @@ h2 {
   height: 150px;
   object-fit: cover;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px transparent;
+  border-style: solid;
   scroll-snap-align: start;
+
+  border-image: linear-gradient(gold,whitesmoke) 1 ;
+  animation: 1s newBorder infinite alternate;
+  
+
+}
+@keyframes newBorder
+{
+  100%{
+    border-image: linear-gradient(gold,whitesmoke) 1;
+  }
+  100%
+  {
+    border-image: linear-gradient(whitesmoke,gold)1;
+  }
 }
 
 .carrusel-btn {
@@ -111,7 +184,8 @@ form input, form select, form textarea, form button {
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid ;
+  border-style: 1px solid;
 }
 
 form button {
@@ -138,12 +212,12 @@ footer {
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
+  
 }
 
 .formulario 
 {
   margin-top: -25%;
-
   
 }
 
@@ -218,5 +292,13 @@ h6
 
   .Seleccion {
     font-size: 14px;
+  
   }
+}
+.Deslizar
+{
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px gold;
+  
 }
